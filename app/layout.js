@@ -22,9 +22,8 @@ export default function RootLayout({ children }) {
         <Head>
     <meta name="robots" content="index, follow"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8101795279662262"
-     crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="0gFLm66ggKv549gKzf8HLsdubZT1xuXbqx-XXpqjrGY" />
-    <meta name="google-adsense-account" content="ca-pub-8101795279662262"></meta>
+     crossorigin="anonymous"></script><meta name="google-site-verification" content="MIDLOYFbs4SS5EOC6oQcQd2CU6R4U0gxy70ESi1oLew" /><meta name="google-site-verification" content="0gFLm66ggKv549gKzf8HLsdubZT1xuXbqx-XXpqjrGY" />
+    <meta name="google-site-verification" content="MIDLOYFbs4SS5EOC6oQcQd2CU6R4U0gxy70ESi1oLew" /><meta name="google-adsense-account" content="ca-pub-8101795279662262"></meta>
      <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></link>
