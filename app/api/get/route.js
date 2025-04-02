@@ -19,8 +19,7 @@ export async function GET() {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },}
-                        );
+    },} );
     }
     else{
       return Response.json({success:'false',message:'try addidng data'}, {
@@ -28,7 +27,7 @@ export async function GET() {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },)
+    },})
     }
   
   
