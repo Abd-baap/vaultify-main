@@ -15,9 +15,9 @@ export const metadata = {
 export default function SupportLayout({ children }) {
   return (
     <>
-      <Navbar />
+      
       {children}
-      <Footer />
+      
     </>
   );
 }
