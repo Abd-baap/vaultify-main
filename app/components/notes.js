@@ -20,7 +20,7 @@ const functi=async() => {
   let b =await a.json()
   // let c= b.body
   // console.log('c', c)
-  if(b){
+  if(b.body){
   setShow(true)
  await setform({
     text:b.body[0].note,
