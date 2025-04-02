@@ -41,11 +41,12 @@ const Navbar = () => {
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuItem><Link href='/suggestion'>Blog</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
-        <DropdownMenuItem><Link href='/about'>About</Link></DropdownMenuItem>
-        <DropdownMenuSeparator></DropdownMenuSeparator>
     <DropdownMenuItem><Link href='/notes'>Notes</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
      <DropdownMenuItem><Link href='/password'>Password</Link></DropdownMenuItem>
+        <DropdownMenuSeparator></DropdownMenuSeparator>
+    
+        <DropdownMenuItem><Link href='/about'>About</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
      
         <DropdownMenuItem><Link href='/support'>Support</Link></DropdownMenuItem>
