@@ -10,7 +10,8 @@ import { ToastContainer, toast } from 'react-toastify';
 const Footer = dynamic(() => import('./components/footer'));
 export const metadata = {
   title: "BitAegiris - Home ",
-  description: "BitAegiris is a powerful password manager offering free, unlimited password and note storage with AES-256 encryption. Your data is secured using a master code, which Vaultiy encrypts before storage for maximum protection. Unlike traditional managers, Vaultiy customizes each password with your encrypted master code before saving it in MongoDB, ensuring top-tier security. Vaultiy’s zero-knowledge encryption means only you can decrypt your data—keeping it safe from breaches. Easily store, manage, and access passwords with end-to-end security. Whether you need a password vault, secure note keeper, or encrypted storage solution, Vaultiy offers a seamless, privacy-first experience. Simplify login management, eliminate weak passwords, and stay secure effortlessly. Take control of your digital security with Vaultiy today!"
+  description: "BitAegiris is a powerful password manager offering free, unlimited password and note storage with AES-256 encryption. Your data is secured using a master code, which Vaultiy encrypts before storage for maximum protection. Unlike traditional managers, Vaultiy customizes each password with your encrypted master code before saving it in MongoDB, ensuring top-tier security. Vaultiy’s zero-knowledge encryption means only you can decrypt your data—keeping it safe from breaches. Easily store, manage, and access passwords with end-to-end security. Whether you need a password vault, secure note keeper, or encrypted storage solution, Vaultiy offers a seamless, privacy-first experience. Simplify login management, eliminate weak passwords, and stay secure effortlessly. Take control of your digital security with Vaultiy today!",
+  robots: 'index, follow', 
 };
 
 export default function RootLayout({ children }) {
