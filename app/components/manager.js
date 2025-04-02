@@ -147,9 +147,9 @@ const Manager = () => {
                         <Link href={item.website}>{item.website}</Link>
                         <span>{item.username}</span>
                         <span>
-    {show && item.password.includes('V@u|t!y') 
+    {show ? item.password.includes('V@u|t!y') 
         ? item.password.split('V@u|t!y')[1] 
-        : "••••••••"}
+        : {item.password}:".........."}
 </span>
                      <button className='bg-blue-50' onClick={() => deletePassword(item.id)}><Image src='/delete.png' className='bg-blue-50' width={30} height={30}alt='delete'></Image ></button>
                           </div>})}
