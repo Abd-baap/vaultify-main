@@ -9,12 +9,7 @@ export async function GET() {
     
     const user = await currentUser();
     if (!user || !user.id) {
-      return Response.json({ success: false, message: "Unauthorized" }, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    }, { status: 401 });
+      return Response.json({ success: false, message: "Unauthorized" }, { status: 401 });
     }
     
     const body = await collection.find({ user: user.id }).toArray();
