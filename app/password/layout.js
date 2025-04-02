@@ -15,9 +15,9 @@ export const metadata = {
 export default function PasswordLayout({ children }) {
   return (
     <>
-      <Navbar />
+      
       {children}
-      <Footer />
+      
     </>
   );
 }
