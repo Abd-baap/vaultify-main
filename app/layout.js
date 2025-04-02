@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></link>
-       h</ead>
+       </head>
       <body className="poppins-regular">
           <ToastContainer  draggablePercent={60} toastStyle={{backgroundColor:"cadetblue",color:"white"}}/>
         <Navbar/>
