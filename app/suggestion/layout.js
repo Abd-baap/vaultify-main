@@ -13,9 +13,9 @@ export const metadata = {
 export default function BlogLayout({ children }) {
   return (
     <>
-      <Navbar />
+      
       {children}
-      <Footer />
+      
     </>
   );
 }
