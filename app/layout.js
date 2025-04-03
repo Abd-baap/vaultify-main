@@ -15,6 +15,9 @@ export const metadata = {
   verification: {
     google: "MIDLOYFbs4SS5EOC6oQcQd2CU6R4U0gxy70ESi1oLew",
   },
+  adsense: {
+    account: "ca-pub-6836466532865002"
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -25,8 +28,15 @@ export const metadata = {
     ],
     stylesheets: [
       "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-    ]
-  }
+    ],
+  },
+  scripts: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002",
+      async: true,
+      crossorigin: "anonymous"
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
