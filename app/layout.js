@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import { ClerkProvider } from '@clerk/nextjs';
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify';
+import Script from 'next/script';  // Import for async scripts
 import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 import Navbar from "./components/navbar";
@@ -15,28 +16,9 @@ export const metadata = {
   verification: {
     google: "MIDLOYFbs4SS5EOC6oQcQd2CU6R4U0gxy70ESi1oLew",
   },
-  adsense: {
-    account: "ca-pub-6836466532865002"
-  },
   icons: {
     icon: "/favicon.ico",
-  },
-  links: {
-    preconnect: [
-      "https://fonts.googleapis.com",
-      "https://fonts.gstatic.com"
-    ],
-    stylesheets: [
-      "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-    ],
-  },
-  scripts: [
-    {
-      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002",
-      async: true,
-      crossorigin: "anonymous"
-    }
-  ]
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -44,13 +26,28 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ClerkProvider>
         <Analytics />
+        <head>
+          <meta name="google-adsense-account" content="ca-pub-6836466532865002" />
+          <meta name="robots" content="index, follow" />
+          <meta name="google-site-verification" content="MIDLOYFbs4SS5EOC6oQcQd2CU6R4U0gxy70ESi1oLew" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+        </head>
         <body className="poppins-regular">
           <ToastContainer draggablePercent={60} toastStyle={{ backgroundColor: "cadetblue", color: "white" }} />
           <Navbar />
           {children}
           <Footer />
         </body>
+        {/* Google AdSense Script */}
+        <Script
+          strategy="afterInteractive"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
+          crossOrigin="anonymous"
+        />
       </ClerkProvider>
     </html>
   );
-}
+    }
