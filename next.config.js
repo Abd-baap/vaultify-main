@@ -1,4 +1,5 @@
-module.exports = {
+
+const nextConfig = {
   async redirects() {
     return [
       {
@@ -9,7 +10,6 @@ module.exports = {
             value: 'bitaegiris.vercel.app',
           },
         ],
-        protocol: 'http',
         permanent: true,
         destination: 'https://bitaegiris.vercel.app/:path*',
       },
@@ -29,3 +29,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = nextConfig;
