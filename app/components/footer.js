@@ -17,7 +17,7 @@ const Footer = () => {
         <span><Link href='/'>Home</Link></span>
         <span><Link href='/about'>About Us</Link></span>
         <span><Link href='/support'>Support Us</Link></span>
-        <span><Link href='/manager'>Manage Passwords</Link></span>
+        <span><Link href='/password'>Manage Passwords</Link></span>
       </div>
       </div>
       
