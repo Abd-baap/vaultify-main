@@ -23,7 +23,7 @@ const page = () => {
       ]
   return (
     <div className='w-[100%] h-[100%] flex flex-col justify-center my-8 p-8 items-center'>
-      <h1 className="text-3xl font-bold">Protect Your Account: Best Security Practices</h1>
+      <h1 className="text-3xl text-center my-2 font-bold">Protect Your Account: Best Security Practices</h1>
       <div className="flex  gap-16 w-[80%] h-[100%] justify-center items-center flex-wrap">
 {
 tips.map((item) => {
