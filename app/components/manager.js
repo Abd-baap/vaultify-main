@@ -140,9 +140,10 @@ const Manager = () => {
                 <label htmlFor="mastercode">Mastercode:</label>
                 <input type="text" name="mastercode" id="mastercode" value={mastercode} placeholder='Enter Your Saved Mastercode' className='w-[100%] border border-black rounded-2xl p-2 text-xs sm:w-[80%]' onChange={(e) => setMastercode(e.target.value)} />
                 <Button className='sm:w-[30%] w-[70%] rounded-xl' onClick={() => check()}>See Password</Button>
-    <Link className="text-blue-700" href='/forgot-mastercode'>Forgot Mastercode?</Link>
     
             </div>
+    
+    <Link className="text-blue-700" href='/forgot-mastercode'>Forgot Mastercode?</Link>
             <div className="output font-bold gap-2 w-[100%] flex flex-col justify-center items-center">
                 {passwordarray.map((item) => {
                     return <div key={item.id} className="output gap-6 shadow-xl shadow-blue-100 flex justify-evenly items-center w-[80%] rounded-md  py-4 bg-blue-50 border-white border-2 flex-wrap">
