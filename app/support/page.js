@@ -1,4 +1,4 @@
-import Link from 'next/link'
+eimport Link from 'next/link'
 import React from 'react'
 import Contribution from '../components/contribution'
 import { Button } from '@/components/ui/button'
@@ -26,7 +26,7 @@ const page = () => {
            
       </ul>
     </div>
-        <div className='w-[100%] h-[100%] flex flex-col text-center  my-8 p-8 items-center'>
+        <div className='w-[100%] h-[100%] flex flex-col text-center  my-8 p-8 -center'>
         <h1 className="text-2xl font-bold text-blue-700">What we do to your password</h1>
         <ol className="flex flex-col list-decimal pl-5 w-[100%] my-8 p-4 items-center gap-6">
           <div className="masterdoe flex flex-col justify-center items-center w-[100%] gap-4 ">
