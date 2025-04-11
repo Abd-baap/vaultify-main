@@ -35,7 +35,7 @@ const page = () => {
             </ul>
         </div>
         </div>
-                      <div className='w-[100%] h-[100%] flex flex-col text-center justify-center my-8 p-8 items-center'>
+                      <div className='w-[100%] h-[100%] flex flex-col text-center  my-8 p-8 items-center'>
         <h1 className="text-2xl font-bold text-blue-700 font-bold">What we do to your password</h1>
         <ol className="flex flex-col list-decimal pl-5 w-[100%] my-8 p-4 items-center gap-6">
           <div className="masterdoe flex flex-col justify-center items-center w-[100%] gap-4 ">
