@@ -1,4 +1,4 @@
-eimport Link from 'next/link'
+import Link from 'next/link'
 import React from 'react'
 import Contribution from '../components/contribution'
 import { Button } from '@/components/ui/button'
