@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       <ClerkProvider>
         <Analytics />
         <head>
+    <meta name="google-site-verification" content="ALiT_2SFuPzAm6sWLLTX9A-G1SfuZgzgrSAK3Yns-vk" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-5858782924683500"/>
