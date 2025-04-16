@@ -6,7 +6,6 @@ import Script from 'next/script';  // Import for async scripts
 import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 import Navbar from "./components/navbar";
-import Script from 'next/script';
 const Footer = dynamic(() => import('./components/footer'));
 
 export const metadata = {
