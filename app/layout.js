@@ -28,14 +28,7 @@ export default function RootLayout({ children }) {
         <Analytics />
         <head>
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNK6RVPV5S"></script>
-<Script>
-window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-YNK6RVPV5S');
-</Script>
   
     <meta name="google-site-verification" content="ALiT_2SFuPzAm6sWLLTX9A-G1SfuZgzgrSAK3Yns-vk" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
@@ -58,13 +51,27 @@ window.dataLayer = window.dataLayer || [];
           {children}
           <Footer />
         </body>
-        {/* Google AdSense Script */}
         <Script
-          strategy="afterInteractive"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
-          crossOrigin="anonymous"
-        />
+            src="https://www.googletagmanager.com/gtag/js?id=G-YNK6RVPV5S"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YNK6RVPV5S');
+            `}
+          </Script>
+
+          {/* Google AdSense */}
+          <Script
+            strategy="afterInteractive"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
+            crossOrigin="anonymous"
+          />
+            
       </ClerkProvider>
     </html>
   );
