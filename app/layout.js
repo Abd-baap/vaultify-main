@@ -6,7 +6,7 @@ import Script from 'next/script';  // Import for async scripts
 import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 import Navbar from "./components/navbar";
-
+import Script from 'next/script';
 const Footer = dynamic(() => import('./components/footer'));
 
 export const metadata = {
@@ -29,13 +29,13 @@ export default function RootLayout({ children }) {
         <head>
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNK6RVPV5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+<Script>
+window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-YNK6RVPV5S');
-</script>
+</Script>
   
     <meta name="google-site-verification" content="ALiT_2SFuPzAm6sWLLTX9A-G1SfuZgzgrSAK3Yns-vk" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
