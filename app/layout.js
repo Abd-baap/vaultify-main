@@ -27,6 +27,16 @@ export default function RootLayout({ children }) {
       <ClerkProvider>
         <Analytics />
         <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNK6RVPV5S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YNK6RVPV5S');
+</script>
+  
     <meta name="google-site-verification" content="ALiT_2SFuPzAm6sWLLTX9A-G1SfuZgzgrSAK3Yns-vk" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
      crossorigin="anonymous"></script>
