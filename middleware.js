@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-
+response.headers.set("X-Robots-Tag", "index, follow"); // <<< add this line
 const isPublicRoute = createRouteMatcher([
   "/",
   "/about",
