@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-response.headers.set("X-Robots-Tag", "index, follow"); // <<< add this line
+
 const isPublicRoute = createRouteMatcher([
   "/",
   "/about",
@@ -23,7 +23,7 @@ export default clerkMiddleware(async (auth, request) => {
   response.headers.set("Access-Control-Allow-Origin", "*"); // Allow all origins
   response.headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
+response.headers.set("X-Robots-Tag", "index, follow"); 
   // Handle Preflight (OPTIONS) Request
   if (request.method === "OPTIONS") {
     return new Response(null, { headers: response.headers, status: 200 });
