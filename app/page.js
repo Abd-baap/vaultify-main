@@ -10,7 +10,7 @@ export default function Home() {
     <div className="w-full p-0 m-0 ">
       <Herosection />
       <div className="ehat is aws256 gap-4 flex flex-col justify-center items-center my-8  p-8 shadow-sm hover:shadow-xl w-[100%] text-xl">
-    <span className="font-bold text-2xl text-center Why Password Security Is Important</span>
+    <span className="font-bold text-2xl text-center"> Why Password Security Is Important</span>
     <span className="w-[100%]" >In today’s digital world, passwords are often the first and only line of defense protecting your personal information, financial data, and online identity. Weak or reused passwords can make it easy for attackers to gain unauthorized access to your accounts, leading to data breaches, identity theft, and financial loss. Implementing strong password security — such as using complex, unique passwords and secure encryption methods — helps ensure that even if your data is exposed, it remains protected. Password security isn’t just a tech issue; it’s a critical part of staying safe online.
 </span>
 </div>
