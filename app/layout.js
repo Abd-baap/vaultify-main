@@ -51,17 +51,15 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </body>
-        <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-YNK6RVPV5S"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-V1YSCDMHB'`}
-          </Script>
+        
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-NQJ9X9ZQTQ"></Script>
+<Script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NQJ9X9ZQTQ');
+</Script>
 
           {/* Google AdSense */}
           <Script
