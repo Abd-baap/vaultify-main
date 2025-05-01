@@ -60,8 +60,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-YNK6RVPV5S');
-            `}
+              gtag('config', 'G-V1YSCDMHB'`}
           </Script>
 
           {/* Google AdSense */}
