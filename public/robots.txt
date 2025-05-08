@@ -1,3 +1,5 @@
 User-agent: *
+Disallow: /sign-in
+Disallow: /password
 Allow: /sitemap.xml
 Sitemap: https://bitaegiris.vercel.app/sitemap.xml
