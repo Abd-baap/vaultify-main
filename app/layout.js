@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import { ClerkProvider } from '@clerk/nextjs';
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify';
 import Script from 'next/script';  // Import for async scripts
@@ -23,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ClerkProvider>
+    
         <Analytics />
         <head>
     
@@ -60,7 +59,7 @@ export default function RootLayout({ children }) {
             crossOrigin="anonymous"
           />
             
-      </ClerkProvider>
+      
     </html>
   );
     }
