@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import Navbar from "../components/navbar";
 
+import { ClerkProvider } from '@clerk/nextjs';
 const Footer = dynamic(() => import('../components/footer'));
 
 export const metadata = {
@@ -15,8 +16,9 @@ export const metadata = {
 export default function PasswordLayout({ children }) {
   return (
     <>
-      
+      <ClerkProvider>
       {children}
+    <ClerkProvider/>
       
     </>
   );
