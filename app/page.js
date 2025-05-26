@@ -1,20 +1,27 @@
+// pages/index.js
 import dynamic from 'next/dynamic';
 import Herosection from './components/herosection'; // Load immediately
 import Features from './components/features'; // Server Component
 import Usage from './components/usage'; // Server Component
+import BitaegirisSecurity from './components/BitaegirisSecurity'; // Import the new component
 
 const Contribution = dynamic(() => import('./components/contribution'));
+
 export default function Home() {
-  
   return (
-    <div className="w-full p-0 m-0 ">
+    <div className="w-full p-0 m-0">
       <Herosection />
-      <div className="ehat is aws256 gap-4 flex flex-col justify-center items-center my-8  p-8 shadow-sm hover:shadow-xl w-[100%] text-xl">
-    <span className="font-bold text-2xl text-center"> Why Password Security Is Important</span>
-    <span className="w-[100%]" >In today’s digital world, passwords are often the first and only line of defense protecting your personal information, financial data, and online identity. Weak or reused passwords can make it easy for attackers to gain unauthorized access to your accounts, leading to data breaches, identity theft, and financial loss. Implementing strong password security — such as using complex, unique passwords and secure encryption methods — helps ensure that even if your data is exposed, it remains protected. Password security isn’t just a tech issue; it’s a critical part of staying safe online.
-</span>
-</div>
-     <div className='w-[100%] h-[100%] flex flex-col text-center justify-center items-center my-8 p-8 center'>
+      <div className="ehat is aws256 gap-4 flex flex-col justify-center items-center my-8 p-8 shadow-sm hover:shadow-xl w-[100%] text-xl">
+        <span className="font-bold text-2xl text-center">Why Password Security Is Important</span>
+        <span className="w-[100%]">
+          In today’s digital world, passwords are often the first and only line of defense protecting your personal information, financial data, and online identity. Weak or reused passwords can make it easy for attackers to gain unauthorized access to your accounts, leading to data breaches, identity theft, and financial loss. Implementing strong password security — such as using complex, unique passwords and secure encryption methods — helps ensure that even if your data is exposed, it remains protected. Password security isn’t just a tech issue; it’s a critical part of staying safe online.
+        </span>
+      </div>
+
+      {/* Integrate the BitaegirisSecurity component here */}
+      <BitaegirisSecurity />
+
+      <div className='w-[100%] h-[100%] flex flex-col text-center justify-center items-center my-8 p-8 center'>
         <h1 className="text-2xl font-bold text-center font-bold">What we do to your password</h1>
         <ol className="flex flex-col list-decimal pl-5 w-[100%] my-8 p-4 items-center gap-6">
           <div className="masterdoe flex flex-col justify-center items-center w-[100%] gap-4 ">
@@ -59,10 +66,9 @@ export default function Home() {
           </div>
         </ol>
       </div>
-      <Features/>
-        <Usage/>
-      <Contribution/>
-      </div>
-   
-  )
-}
+      <Features />
+      <Usage />
+      <Contribution />
+    </div>
+  );
+  }
