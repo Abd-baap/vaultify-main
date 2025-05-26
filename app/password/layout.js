@@ -25,19 +25,7 @@ export default function PasswordLayout({ children }) {
       
       {children}
     </SignedIn>
-    <ClerkProvider/>
-      
-    </>
-  );
-}
-'use client';
-
-
-export default function OtherPage() {
-  return (
-    <>
-      
-
+    </ClerkProvider>
       
     </>
   );
