@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 import Navbar from "./components/navbar";
 const Footer = dynamic(() => import('./components/footer'));
-
+v
 export const metadata = {
   title: "BitAegiris - Home",
   description: "BitAegiris is a powerful password manager offering free, unlimited password and note storage with AES-256 encryption. Your data is secured using a master code, which BitAegiris encrypts before storage for maximum protection. Unlike traditional managers, BitAegiris customizes each password with your encrypted master code before saving it in MongoDB, ensuring top-tier security. BitAegiris’ zero-knowledge encryption means only you can decrypt your data—keeping it safe from breaches. Easily store, manage, and access passwords with end-to-end security. Whether you need a password vault, secure note keeper, or encrypted storage solution, BitAegiris offers a seamless, privacy-first experience. Simplify login management, eliminate weak passwords, and stay secure effortlessly. Take control of your digital security with BitAegiris today!",
@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    
+    <ClerkProvider>
         <Analytics />
         <head>
     
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836466532865002"
             crossOrigin="anonymous"
           />
-            
+              </ClerkProvider>
       
     </html>
   );
