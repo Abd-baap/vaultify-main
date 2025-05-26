@@ -1,6 +1,6 @@
 
 
-import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+
 import Manager from '../components/manager'; // Replace with your actual component
 
 export const metadata = {
@@ -15,11 +15,11 @@ export const metadata = {
 export default function PasswordLayout({ children }) {
   return (
     <>
-    <ClerkProvider>
+    
       
       {children}
     
-    </ClerkProvider>
+    
       
     </>
   );
