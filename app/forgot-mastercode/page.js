@@ -1,4 +1,12 @@
 "use client"
+
+
+import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+
+        
+      
+ 
+ 
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import React from 'react'
@@ -17,10 +25,17 @@ const page = () => {
     });
     const result = await response.json();
     console.log('result', result)
-router.push('/manager');
+router.push('/password');
     }
     
   return (
+      
+    <ClerkProvider>
+    <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      
+    <SignedIn>
     <div className='w-screen h-screen gap-[5%]  shadow-xl shadow-blue-100 flex flex-col items-center  text-center p-8 my-8'>
       <h1 className="text-2xl font-bold">
         Forgot Your Mastercode Dont Worry , Click On Confrm Button . By clicking on confirm button your all passwords and notes will be deleted and u can set new mastercode
@@ -30,6 +45,8 @@ router.push('/manager');
       <Link className='w-[30%] text-white' href='/manager'><Button className='w-[100%] bg-blue-800 text-white'>Cancel</Button></Link>
       </div>
     </div>
+   </SignedIn>
+    </ClerkProvider>
   )
 }
 
