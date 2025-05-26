@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { SignedOut, SignedIn } from '@clerk/nextjs'
 
 
 import { UserButton } from '@clerk/nextjs'
@@ -24,17 +23,7 @@ const Navbar = () => {
       <span className="font-bold text-xl text-blue-900 ">Bit<span className=' text-black'>Aegiris</span></span>
       </div>
       <div className="dropdown flex justify-center items-start gap-2 sm:gap-4">
-    <SignedIn>
-      <Link href='/sign-out'  className=' px-2  sm:px-4 '>
-      <UserButton/>
-      </Link>
-    </SignedIn>
-    <SignedOut>
-      <Link href='/sign-in' className=' px-2  sm:px-4 '>
-      <Button  className=' px-4  sm:px-8 '>Sign-in</Button>
-      </Link>
-    </SignedOut>
-    <DropdownMenu>
+       <DropdownMenu>
       <DropdownMenuTrigger><Image src="/index.png" width={35} height={35}alt='index image'></Image></DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem><Link href='/'>Home</Link></DropdownMenuItem>
