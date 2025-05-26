@@ -30,9 +30,9 @@ const Navbar = () => {
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuItem><Link href='/suggestion'>Blog</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
-    <DropdownMenuItem><Link href='/notes'>Notes</Link></DropdownMenuItem>
+    <DropdownMenuItem><Link rel="nofollow" href='/notes'>Notes</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
-     <DropdownMenuItem><Link href='/password'>Password</Link></DropdownMenuItem>
+     <DropdownMenuItem><Link rel="nofollow" href='/password'>Password</Link></DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
     
         <DropdownMenuItem><Link href='/about'>About</Link></DropdownMenuItem>
