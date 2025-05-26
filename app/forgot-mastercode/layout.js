@@ -1,0 +1,24 @@
+
+
+import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+import Manager from '../components/manager'; // Replace with your actual component
+
+
+export default function PasswordLayout({ children }) {
+  return (
+    <>
+    <ClerkProvider>
+    <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      
+    <SignedIn>
+        
+      
+      {children}
+    </SignedIn>
+    </ClerkProvider>
+      
+    </>
+  );
+}
