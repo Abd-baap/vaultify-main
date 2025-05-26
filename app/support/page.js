@@ -113,7 +113,7 @@ Yes! BitAegiris is designed to sync your passwords securely across:<ol className
     <Contribution/>
         <span className="text-2xl my-8 font-bold text-blue-900 p-8">
             Join us in taking control of your digital security—because your passwords deserve the best protection.</span>
-            <Button className="sm:w-[45%] w-[70%]"><Link href='/password'> Get Started!</Link></Button>
+            <Button className="sm:w-[45%] w-[70%]"><Link rel="nofollow" href='/password'> Get Started!</Link></Button>
     
     </div>
   )
