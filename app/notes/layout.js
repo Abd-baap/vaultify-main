@@ -14,15 +14,8 @@ export default function NotesLayout({ children }) {
     <>
       
     <ClerkProvider>
-    <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
-      
-    <SignedIn>
-        
       
       {children}
-    </SignedIn>
     </ClerkProvider>
       
     </>
