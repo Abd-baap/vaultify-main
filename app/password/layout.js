@@ -1,8 +1,7 @@
-import dynamic from 'next/dynamic';
-import Navbar from "../components/navbar";
 
-import { ClerkProvider } from '@clerk/nextjs';
-const Footer = dynamic(() => import('../components/footer'));
+
+import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+import Manager from './Manager'; // Replace with your actual component
 
 export const metadata = {
   title: "BitAegiris - Password Manager",
@@ -16,9 +15,29 @@ export const metadata = {
 export default function PasswordLayout({ children }) {
   return (
     <>
-      <ClerkProvider>
+    <ClerkProvider>
+    <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      
+    <SignedIn>
+        
+      
       {children}
+    </SignedIn>
     <ClerkProvider/>
+      
+    </>
+  );
+}
+'use client';
+
+
+export default function OtherPage() {
+  return (
+    <>
+      
+
       
     </>
   );
