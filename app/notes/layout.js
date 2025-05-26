@@ -1,8 +1,5 @@
-import dynamic from 'next/dynamic';
-import Navbar from "../components/navbar";
 
-const Footer = dynamic(() => import('../components/footer'));
-
+import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 export const metadata = {
   title: "BitAegiris - Notes Manager",
   description: "Store and manage your notes securely with BitAegiris Notes. Enjoy advanced encryption and a seamless, private note-taking experience.",
@@ -16,7 +13,17 @@ export default function NotesLayout({ children }) {
   return (
     <>
       
+    <ClerkProvider>
+    <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      
+    <SignedIn>
+        
+      
       {children}
+    </SignedIn>
+    </ClerkProvider>
       
     </>
   );
