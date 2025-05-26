@@ -6,9 +6,10 @@ import { ClerkProvider,SignedIn, SignedOut, RedirectToSignIn } from '@clerk/next
 export default function PasswordLayout({ children }) {
   return (
     <>
-        
+        <ClerkProvider>
       
       {children}
+    </ClerkProvider>
     </>
   );
 }
