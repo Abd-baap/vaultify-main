@@ -11,7 +11,7 @@ export default function PasswordLayout({ children }) {
 
       
       {children}
-      
+    </ClerkProvider>
     </>
   );
 }
