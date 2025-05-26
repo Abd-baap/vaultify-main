@@ -8,8 +8,8 @@ const Footer = () => {
       <p>If you want to let us know what we didn't know</p>
       <div className="flex sm:flex-row flex-col gap-2 sm:justify-around w-[100%] items-center">   <div className="flex contacts  flex-col justify-center items-center">
        <h1 className='font-bold'>Contacts</h1>
-       <span><Link href='https://www.youtube.com/@DesiEdilances'>Youtube</Link></span>
-       <span><Link href='https://www.instagram.com/desi_edilances'>Instagram</Link></span>
+       <span><Link rel="nofollow" href='https://www.youtube.com/@DesiEdilances'>Youtube</Link></span>
+       <span><Link rel="nofollow" href='https://www.instagram.com/desi_edilances'>Instagram</Link></span>
        <span>Gmail ID : abhigya.abd@gmail.com</span>
       </div>
       <div className='Pages flex flex-col justify-center items-center'>
@@ -17,7 +17,7 @@ const Footer = () => {
         <span><Link href='/'>Home</Link></span>
         <span><Link href='/about'>About Us</Link></span>
         <span><Link href='/support'>Support Us</Link></span>
-        <span><Link href='/password'>Manage Passwords</Link></span>
+        <span><Link rel="nofollow" href='/password'>Manage Passwords</Link></span>
       </div>
       </div>
       
