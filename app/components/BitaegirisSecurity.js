@@ -134,13 +134,13 @@ const BitaegirisSecurity = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-blue-100 w-full max-w-4xl p-8 mx-auto my-12 flex flex-col items-center justify-start gap-10">
+    <div className="bg-white rounded-xl shadow-lg border border-blue-100 w-[100%] max-w-4xl p-8 mx-auto my-12 flex flex-col items-center justify-start gap-10">
       <h1 className="font-inter text-center text-blue-600 mb-5 text-4xl font-bold drop-shadow-lg">
         Your Trust, Our Priority: Bitaegiris Security Explained
       </h1>
 
       {/* Step 1: Mastercode Setup */}
-      <div className="step w-full px-5 opacity-100">
+      <div className="step w-[100%] px-5 opacity-100">
         <div className="step-content text-center w-full">
           <h2 className="font-inter text-blue-600 mb-6 text-3xl font-bold drop-shadow-sm">
             Step 1: Mastercode Setup
