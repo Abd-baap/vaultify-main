@@ -1,5 +1,5 @@
 "use client"
-import Manager from "../components/manager";\
+import Manager from "../components/manager";
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 
 import { Button } from "@/components/ui/button";
