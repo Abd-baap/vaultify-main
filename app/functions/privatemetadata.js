@@ -13,7 +13,7 @@ export async function Adding(userId, code) {
     const salt = crypto.randomBytes(16).toString("hex"); // Secure random salt
     const hashedCode = await bcrypt.hash(code, 10);
     const key = crypto.scryptSync(code, salt, 32).toString("hex");
-    const client=await clerkClient()
+    const client=await clerkClient
  
     await client.users.updateUserMetadata(userId, {
       privateMetadata: {
