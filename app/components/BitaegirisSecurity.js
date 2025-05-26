@@ -1,4 +1,5 @@
-"use client
+"use client"
+
 // components/BitaegirisSecurity.jsx
 import React, { useEffect, useRef, useState } from 'react';
 
