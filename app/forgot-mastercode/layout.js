@@ -8,16 +8,9 @@ export default function PasswordLayout({ children }) {
   return (
     <>
     <ClerkProvider>
-    <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
-      
-    <SignedIn>
-        
+
       
       {children}
-    </SignedIn>
-    </ClerkProvider>
       
     </>
   );
