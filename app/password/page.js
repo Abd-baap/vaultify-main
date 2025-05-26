@@ -1,5 +1,7 @@
 "use client"
-import Manager from "../components/manager";
+import Manager from "../components/manager";\
+import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+
 import { Button } from "@/components/ui/button";
 import {useEffect, useState  } from "react";
 import { useUser } from "@clerk/nextjs";
@@ -33,7 +35,13 @@ export default function Password() {
       
     }, [])
   return(
+    
     <div>
+     <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      
+    <SignedIn>
     {code&& <Manager/>}
 {!code && <div className="flex flex-col w-[100%] justify-center items-center h-[100%] gap-6  shadow-md hover:shadow-xl py-6 text-center"  >
   
@@ -59,6 +67,7 @@ export default function Password() {
    
         
         </div>}
+        </SignedIn>
     </div>
   )
 }
