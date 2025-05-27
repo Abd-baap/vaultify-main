@@ -3,6 +3,7 @@ import { SignIn, useUser } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'; // For App Router
 // import { useRouter } from 'next/router'; // For Pages Router (older)
 export default function Home() {
+  const router=useRouter()
   const { user } = useUser()
 
   if (!user) return <SignIn />
