@@ -9,8 +9,7 @@ const isPublicRoute = createRouteMatcher([
   '/sitemap.xml',
   '/robots.txt',
   // Add other public routes if you have them, e.g., /sign-in, /sign-up
-  '/sign-in', 
-  '/sign-up',
+  '/sign-in',
 ]);
 
 export default clerkMiddleware((auth, req) => {
@@ -23,10 +22,8 @@ export default clerkMiddleware((auth, req) => {
   // If it's not a public route, check if the user is signed in
   if (!auth().userId) {
     // If not signed in and trying to access a private route, redirect to sign-in
-    // You can customize the redirect URL as needed
-    const signInUrl = new URL('/sign-in', req.url); // Construct absolute URL
-    signInUrl.searchParams.set('redirect_url', req.url); // Optionally add a redirect_url param
-    return NextResponse.redirect(signInUrl);
+    // You can customize the redirect URL as needed // Optionally add a redirect_url param
+    return NextResponse.redirect('/sign-in');
   }
 
   // If signed in and accessing a private route, allow access
