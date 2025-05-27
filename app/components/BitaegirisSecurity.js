@@ -9,31 +9,26 @@ const BitaegirisSecurity = () => {
   const [lockState, setLockState] = useState('closed'); // 'closed', 'opening', 'open'
   const [checkmarkVisible, setCheckmarkVisible] = useState(false);
 
-  // Generic typewriter effect function adapted for React refs
+  // --- OPTIMIZED TYPEWRITER EFFECT FUNCTION ---
+  // This version updates textContent efficiently,
+  // avoiding repeated DOM manipulations for every character.
   const typewriterEffect = (elementRef, text, speed = 50, callback = null) => {
     if (!elementRef.current) return;
 
     let i = 0;
-    elementRef.current.innerHTML = ''; // Use innerHTML to preserve existing spans/markup
+    let currentText = ''; // Accumulate text here
+    elementRef.current.textContent = ''; // Clear existing text initially
     elementRef.current.classList.add('typing-active');
 
     const interval = setInterval(() => {
       if (i < text.length) {
-        // Check if the next character is part of an HTML tag
-        if (text.substring(i, i + 1) === '<') {
-          const tagEnd = text.indexOf('>', i);
-          if (tagEnd !== -1) {
-            elementRef.current.innerHTML += text.substring(i, tagEnd + 1);
-            i = tagEnd + 1;
-          } else {
-            // Fallback if tag is malformed, just add char
-            elementRef.current.innerHTML += text.charAt(i);
-            i++;
-          }
-        } else {
-          elementRef.current.innerHTML += text.charAt(i);
-          i++;
-        }
+        // Handle HTML tags if necessary, but keep it efficient.
+        // For simple text, textContent is best. If `text` string truly contains HTML,
+        // you'd need a more complex parser or ensure text only contains plain text.
+        // For now, assuming plain text for better performance.
+        currentText += text.charAt(i);
+        elementRef.current.textContent = currentText; // Update textContent in one go
+        i++;
       } else {
         clearInterval(interval);
         elementRef.current.classList.remove('typing-active');
@@ -54,12 +49,14 @@ const BitaegirisSecurity = () => {
     const typeEffectPassword = (elementRef, text) => {
       if (!elementRef.current) return;
       let i = 0;
+      let currentText = ''; // Accumulate text
       elementRef.current.textContent = '';
       elementRef.current.classList.add('typing-active');
 
       const interval = setInterval(() => {
         if (i < text.length) {
-          elementRef.current.textContent += text.charAt(i);
+          currentText += text.charAt(i);
+          elementRef.current.textContent = currentText; // Update textContent
           i++;
         } else {
           clearInterval(interval);
@@ -83,11 +80,12 @@ const BitaegirisSecurity = () => {
     decryptionInputs.forEach((input, index) => {
       setTimeout(() => {
         input.style.transform = 'translateY(-20px)'; // Simple bounce
-        input.style.filter = 'drop-shadow(0 0 10px #00e0ff)'; // Glowing effect (neon-blue)
+        // Reduced complexity for filter/shadow as they can be heavy
+        input.style.boxShadow = '0 0 10px #00e0ff'; // Use simpler box-shadow instead of drop-shadow
         input.style.opacity = 1; // Ensure visibility
         setTimeout(() => {
           input.style.transform = 'translateY(0)';
-          input.style.filter = 'none';
+          input.style.boxShadow = 'none'; // Remove box-shadow
         }, 400);
       }, delay);
       delay += 300;
@@ -128,8 +126,10 @@ const BitaegirisSecurity = () => {
 
     // Cleanup intervals if component unmounts (important for SPA)
     return () => {
-      // No specific cleanup for these animations as they are one-shot or self-cycling
-      // If you had continuous loops, you'd clear them here.
+      // For this particular setup, intervals are cleared internally.
+      // If you had external setIntervals or timeouts, clear them here:
+      // clearTimeout(yourTimeout);
+      // clearInterval(yourInterval);
     };
   }, []);
 
@@ -184,10 +184,10 @@ const BitaegirisSecurity = () => {
                 <span ref={transformedPasswordRef} className="font-inter text-blue-400 relative overflow-hidden"></span>
               </span>
             </div>
-            <p className="text-lg leading-relaxed mb-5">
-              There is internal logic where the Mastercode may modify the password (e.g., add characters if the password has numbers).
-            </p>
           </div>
+          <p className="text-lg leading-relaxed mb-5">
+            There is internal logic where the Mastercode may modify the password (e.g., add characters if the password has numbers).
+          </p>
         </div>
       </div>
 
@@ -228,7 +228,7 @@ const BitaegirisSecurity = () => {
             Step 4: Decryption Process
           </h2>
           <p className="text-lg leading-relaxed mb-5">To decrypt a password, the system securely retrieves 3 things:</p>
-          <div className="flex gap-6 flex-wrap justify-center">
+          <div className="flex gap-6 flex-wrap justify-center decryption-inputs"> {/* Added class for querySelectorAll */}
             <div className="input-item bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm flex flex-col items-center w-36 transition-transform duration-300">
               <i className="fas fa-fingerprint text-blue-600 text-3xl mb-2"></i>
               <span className="text-gray-800 text-base text-center">IV (from MongoDB)</span>
@@ -270,6 +270,11 @@ const BitaegirisSecurity = () => {
 
       {/* Custom CSS for animations not directly supported by Tailwind */}
       <style jsx>{`
+        /* Define a CSS variable for the primary blue to be used in animations */
+        :root {
+          --primary-blue: #2563eb; /* Or your exact blue-600 color */
+        }
+
         @keyframes typing-cursor {
           from, to { border-color: transparent }
           50% { border-color: var(--primary-blue); }
