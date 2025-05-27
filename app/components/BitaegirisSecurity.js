@@ -135,14 +135,14 @@ const BitaegirisSecurity = () => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg border overflow-hidden border-blue-100 w-[100%] max-w-4xl p-8 mx-auto my-12 flex flex-col items-center justify-start gap-10">
-      <h1 className="font-inter text-center text-blue-600 mb-5 text-4xl font-bold drop-shadow-lg">
+      <h1 className="font-inter text-center text-blue-600 mb-5 text-2xl font-bold drop-shadow-lg">
         Your Trust, Our Priority: Bitaegiris Security Explained
       </h1>
 
       {/* Step 1: Mastercode Setup */}
       <div className="step w-[100%] px-5 opacity-100">
         <div className="step-content text-center w-full">
-          <h2 className="font-inter text-blue-600 mb-6 text-3xl font-bold drop-shadow-sm">
+          <h2 className="font-inter text-blue-600 mb-6 text-xl font-bold drop-shadow-sm">
             Step 1: Mastercode Setup
           </h2>
           <p className="text-lg leading-relaxed mb-5">
@@ -151,7 +151,7 @@ const BitaegirisSecurity = () => {
           </p>
           <div className="flex flex-col items-center gap-5">
             <div className="flex items-center bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm">
-              <i className="fas fa-key text-blue-500 text-2xl mr-4"></i>
+              <i className="fas fa-key text-blue-500 text-xl mr-4"></i>
               <input type="text" placeholder="e.g., 1234" disabled className="bg-transparent border-none text-gray-800 text-lg outline-none text-center w-36" />
             </div>
             <p className="text-lg leading-relaxed mb-5">
@@ -159,7 +159,7 @@ const BitaegirisSecurity = () => {
             </p>
             <div className="bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm flex flex-col items-center w-fit">
               <span className="text-blue-600 mb-2">Your Mastercode becomes:</span>
-              <span className="font-inter text-blue-400 text-2xl tracking-wider font-bold">#######</span>
+              <span className="font-inter text-blue-400 text-lg tracking-wider font-bold">#######</span>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@ const BitaegirisSecurity = () => {
       {/* Step 2: Password Encryption Logic */}
       <div className="step w-full px-5 opacity-100">
         <div className="step-content text-center w-full">
-          <h2 className="font-inter text-blue-600 mb-6 text-3xl font-bold drop-shadow-sm">
+          <h2 className="font-inter text-blue-600 mb-6 text-xl font-bold drop-shadow-sm">
             Step 2: Password Encryption Logic
           </h2>
           <p className="text-lg leading-relaxed mb-5">
@@ -176,7 +176,7 @@ const BitaegirisSecurity = () => {
           </p>
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm">
-              <span className="font-inter text-gray-800 text-xl whitespace-nowrap">
+              <span className="font-inter text-gray-800 text-lg whitespace-nowrap">
                 <span className="text-blue-600">your_password</span>
                 <i className="fas fa-plus-circle text-blue-400 mx-3"></i>
                 <span className="text-blue-500">Mastercode</span>
@@ -194,12 +194,12 @@ const BitaegirisSecurity = () => {
       {/* Step 3: Dual Database Structure */}
       <div className="step w-full px-5 opacity-100">
         <div className="step-content text-center w-full">
-          <h2 className="font-inter text-blue-600 mb-6 text-3xl font-bold drop-shadow-sm">
+          <h2 className="font-inter text-blue-600 mb-6 text-xl font-bold drop-shadow-sm">
             Step 3: Dual Database Structure
           </h2>
           <div className="flex justify-around gap-8 flex-wrap mt-8">
             <div className="bg-gray-50 rounded-xl p-6 border border-blue-100 shadow-sm w-full md:w-5/12 flex flex-col items-center text-left transition-transform duration-300 hover:translate-y-[-5px] hover:shadow-md">
-              <i className="fas fa-database text-blue-600 text-4xl mb-4"></i>
+              <i className="fas fa-database text-blue-600 text-xl mb-4"></i>
               <h3 className="font-inter text-blue-600 mb-4 text-xl text-center font-bold">MongoDB Stores:</h3>
               <ul className="list-none p-0 m-0 w-full">
                 <li className="bg-blue-50 px-4 py-2 mb-2 rounded-lg border-l-4 border-blue-600 text-base text-gray-800">Website</li>
@@ -209,7 +209,7 @@ const BitaegirisSecurity = () => {
               </ul>
             </div>
             <div className="bg-gray-50 rounded-xl p-6 border border-blue-100 shadow-sm w-full md:w-5/12 flex flex-col items-center text-left transition-transform duration-300 hover:translate-y-[-5px] hover:shadow-md">
-              <i className="fas fa-lock text-blue-600 text-4xl mb-4"></i>
+              <i className="fas fa-lock text-blue-600 text-xl mb-4"></i>
               <h3 className="font-inter text-blue-600 mb-4 text-xl text-center font-bold">Clerk Stores:</h3>
               <ul className="list-none p-0 m-0 w-full">
                 <li className="bg-blue-50 px-4 py-2 mb-2 rounded-lg border-l-4 border-blue-600 text-base text-gray-800">Encryption key</li>
@@ -224,21 +224,21 @@ const BitaegirisSecurity = () => {
       {/* Step 4: Decryption Process */}
       <div className="step w-full px-5 opacity-100">
         <div className="step-content text-center w-full">
-          <h2 className="font-inter text-blue-600 mb-6 text-3xl font-bold drop-shadow-sm">
+          <h2 className="font-inter text-blue-600 mb-6 text-xl font-bold drop-shadow-sm">
             Step 4: Decryption Process
           </h2>
           <p className="text-lg leading-relaxed mb-5">To decrypt a password, the system securely retrieves 3 things:</p>
           <div className="flex gap-6 flex-wrap justify-center decryption-inputs"> {/* Added class for querySelectorAll */}
             <div className="input-item bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm flex flex-col items-center w-36 transition-transform duration-300">
-              <i className="fas fa-fingerprint text-blue-600 text-3xl mb-2"></i>
+              <i className="fas fa-fingerprint text-blue-600 text-xl mb-2"></i>
               <span className="text-gray-800 text-base text-center">IV (from MongoDB)</span>
             </div>
             <div className="input-item bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm flex flex-col items-center w-36 transition-transform duration-300">
-              <i className="fas fa-key text-blue-600 text-3xl mb-2"></i>
+              <i className="fas fa-key text-blue-600 text-xl mb-2"></i>
               <span className="text-gray-800 text-base text-center">Key (from Clerk)</span>
             </div>
             <div className="input-item bg-gray-50 rounded-xl p-4 border border-blue-100 shadow-sm flex flex-col items-center w-36 transition-transform duration-300">
-              <i className="fas fa-shield-alt text-blue-600 text-3xl mb-2"></i>
+              <i className="fas fa-shield-alt text-blue-600 text-xl mb-2"></i>
               <span className="text-gray-800 text-base text-center">Encrypted Password (from MongoDB)</span>
             </div>
           </div>
@@ -248,8 +248,8 @@ const BitaegirisSecurity = () => {
           </p>
           <div className="flex flex-col items-center gap-4 mt-8">
             <div className="relative w-24 h-24 flex items-center justify-center">
-              <i className={`fas fa-lock text-blue-600 text-5xl absolute transition-all duration-500 ${lockState === 'open' ? 'opacity-0 scale-80' : 'opacity-100 scale-100'}`}></i>
-              <i className={`fas fa-lock-open text-blue-400 text-5xl absolute transition-all duration-500 ${lockState === 'open' ? 'opacity-100 scale-100 drop-shadow-lg' : 'opacity-0 scale-80'}`}></i>
+              <i className={`fas fa-lock text-blue-600 text-xl absolute transition-all duration-500 ${lockState === 'open' ? 'opacity-0 scale-80' : 'opacity-100 scale-100'}`}></i>
+              <i className={`fas fa-lock-open text-blue-400 text-xl absolute transition-all duration-500 ${lockState === 'open' ? 'opacity-100 scale-100 drop-shadow-lg' : 'opacity-0 scale-80'}`}></i>
             </div>
             <p className="text-lg text-gray-700">{lockState === 'open' ? 'Password decrypted!' : 'Lock remains closed...'}</p>
           </div>
@@ -260,9 +260,9 @@ const BitaegirisSecurity = () => {
       <div className="step final-message w-full px-5 opacity-100">
         <div className="step-content text-center w-full">
           <div className="bg-gray-50 rounded-xl p-8 border border-blue-100 shadow-sm w-fit max-w-4xl mx-auto">
-            <p ref={finalMessageRef} className="font-inter text-blue-400 text-3xl drop-shadow-md text-center mb-6 font-bold"></p>
+            <p ref={finalMessageRef} className="font-inter text-blue-400 text-xl drop-shadow-md text-center mb-6 font-bold"></p>
             <div className="relative w-20 h-20 mx-auto flex items-center justify-center">
-              <i className={`fas fa-check-circle text-blue-400 text-5xl transition-all duration-1000 ${checkmarkVisible ? 'opacity-100 scale-100 animate-glow-pulse' : 'opacity-0 scale-50'}`}></i>
+              <i className={`fas fa-check-circle text-blue-400 text-2xl transition-all duration-1000 ${checkmarkVisible ? 'opacity-100 scale-100 animate-glow-pulse' : 'opacity-0 scale-50'}`}></i>
             </div>
           </div>
         </div>
